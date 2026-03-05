@@ -6,3 +6,10 @@ data/progress.json
 data/*.db
 .DS_Store
 notebooks/
+
+# JupyterLab extension build artifacts
+labextension/lib/
+labextension/node_modules/
+labextension/torchcode_labext/labextension/
+labextension/tsconfig.tsbuildinfo
+labextension/yarn.lock

@@ -1,0 +1,7 @@
+.torchcode-reset-button .jp-ToolbarButtonComponent {
+  color: var(--jp-warn-color1, #e65100);
+}
+
+.torchcode-colab-button .jp-ToolbarButtonComponent {
+  color: #e8710a;
+}

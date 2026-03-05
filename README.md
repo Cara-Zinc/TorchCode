@@ -47,6 +47,8 @@ TorchCode gives you a **structured practice environment** with:
 | 💡 | **Hints when stuck** | Nudges without full spoilers |
 | 📖 | **Reference solutions** | Study optimal implementations after your attempt |
 | 📊 | **Progress tracking** | What you've solved, best times, and attempt counts |
+| 🔄 | **One-click reset** | Toolbar button to reset any notebook back to its blank template — practice the same problem as many times as you want |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](#) | **Open in Colab** | Every notebook has an "Open in Colab" badge + toolbar button — run problems in Google Colab with zero setup |
 
 No cloud. No signup. No GPU needed. Just `make run` — or try it instantly on Hugging Face.
 
@@ -57,6 +59,8 @@ No cloud. No signup. No GPU needed. Just `make run` — or try it instantly on H
 ### Option 0 — Try it online (zero install)
 
 **[Launch on Hugging Face Spaces](https://huggingface.co/spaces/duoan/TorchCode)** — opens a full JupyterLab environment in your browser. Nothing to install.
+
+Or open any problem directly in Google Colab — every notebook has an [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/duoan/TorchCode/blob/main/templates/01_relu.ipynb) badge.
 
 ### Option 1 — Pull the pre-built image (fastest)
 
@@ -170,6 +174,7 @@ Each problem has **two** notebooks:
 5. See instant colored feedback    →  ✅ pass / ❌ fail per test case
 6. Stuck? Get a nudge              →  hint("relu")
 7. Review the reference solution   →  01_relu_solution.ipynb
+8. Click 🔄 Reset in the toolbar  →  Blank slate — practice again!
 ```
 
 ### In-Notebook API
@@ -207,6 +212,9 @@ status()                    # Progress dashboard — solved / attempted / todo
 │    ├── templates/  (reset on each run)   │
 │    ├── solutions/  (reference impl)      │
 │    ├── torch_judge/ (auto-grading)       │
+│    ├── torchcode-labext (JLab plugin)    │
+│    │     🔄 Reset — restore template     │
+│    │     🔗 Colab — open in Colab        │
 │    └── PyTorch (CPU), NumPy              │
 │                                          │
 │  Judge checks:                           │
@@ -257,7 +265,13 @@ No. Everything runs on CPU. The problems test correctness and understanding, not
 <details>
 <summary><b>Can I keep my solutions between runs?</b></summary>
 <br>
-Blank templates reset on every <code>make run</code> so you practice from scratch. Save your work under a different filename if you want to keep it.
+Blank templates reset on every <code>make run</code> so you practice from scratch. Save your work under a different filename if you want to keep it. You can also click the <b>🔄 Reset</b> button in the notebook toolbar at any time to restore the blank template without restarting.
+</details>
+
+<details>
+<summary><b>Can I use Google Colab instead?</b></summary>
+<br>
+Yes! Every notebook has an <b>Open in Colab</b> badge at the top. Click it to open the problem directly in Google Colab — no Docker or local setup needed. You can also use the <b>Colab</b> toolbar button inside JupyterLab.
 </details>
 
 <details>
